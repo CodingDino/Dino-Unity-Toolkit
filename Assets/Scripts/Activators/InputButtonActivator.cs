@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------------
-#region File Info - ButtonActivator.cs
+#region File Info - InputButtonActivator.cs
 // -----------------------------------------------------------------------------
 // Project:     Drag N Drop Toolkit
 // Created:     Sarah Herzog 2019
@@ -20,10 +20,10 @@ using UnityEngine.Events;
 
 
 // -----------------------------------------------------------------------------
-#region Component: ButtonActivator
+#region Component: InputButtonActivator
 // -----------------------------------------------------------------------------
-[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/ButtonActivator")]
-public class ButtonActivator : MonoBehaviour
+[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/InputButtonActivator")]
+public class InputButtonActivator : MonoBehaviour
 {
 
     // -------------------------------------------------------------------------
