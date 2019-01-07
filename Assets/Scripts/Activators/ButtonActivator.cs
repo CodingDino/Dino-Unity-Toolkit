@@ -22,16 +22,60 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: ButtonActivator
 // -----------------------------------------------------------------------------
-public class ButtonActivator : MonoBehaviour 
+[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/ButtonActivator")]
+public class ButtonActivator : MonoBehaviour
 {
+
+    // -------------------------------------------------------------------------
+    #region Enum: PressType
+    // -------------------------------------------------------------------------
+    public enum PressType
+    {
+        PRESS,
+        HOLD,
+        RELEASE
+    }
+    // -------------------------------------------------------------------------
+    #endregion
+    // -------------------------------------------------------------------------
+
 
     // -------------------------------------------------------------------------
     #region Editor Variables
     // -------------------------------------------------------------------------
+
+    // -------------------------------------------------------------------------
+    [Header("Conditions")]
+    // -------------------------------------------------------------------------
+
     [Tooltip("The button the player must press to activate these actions. Button must be set up in InputManager.")]
     public string button;
+
+    [Tooltip("Style for pressing the button:\n" +
+             "PRESS - Only activates when button is first pressed down.\n" +
+             "HOLD - Activates every frame the button is held down\n" +
+             "RELEASE - Only activates when  a button is released.")]
+    public PressType pressType;
+
+    [Tooltip("For the HOLD pressType only: how many seconds between activations? 0 for no cooldown.")]
+    public float cooldown = 0;
+
+    // -------------------------------------------------------------------------
+
+    [Header("")]
     [Tooltip("The action(s) to be performed.")]
     public UnityEvent actions;
+
+    // -------------------------------------------------------------------------
+    #endregion
+    // -------------------------------------------------------------------------
+
+
+
+    // -------------------------------------------------------------------------
+    #region Internal Variables
+    // -------------------------------------------------------------------------
+    private float lastHoldActivate = 0;
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
@@ -42,11 +86,53 @@ public class ButtonActivator : MonoBehaviour
     // -------------------------------------------------------------------------
     private void Update()
     {
-        // Each frame, check if the button is pressed.
-        if (Input.GetButton(button))
+        // Each frame, check if we should activate based on the type of press style
+        // Check which press type we have specified
+        switch (pressType)
         {
-            // The button is pressed, so perform the actions.
-            actions.Invoke();
+            // In this case, our press type is PRESS.
+            case PressType.PRESS:
+                // Check if the button has just now been pushed down
+                if (Input.GetButtonDown(button))
+                {
+                    // The button has just been pressed, so perform the actions.
+                    actions.Invoke();
+                }
+                break;
+
+            // In this case, our press type is PRESS.
+            case PressType.HOLD:
+                // Check if the button is being held this frame
+                if (Input.GetButton(button))
+                {
+                    // The button is being held, check if we are off cooldown
+                    if (Time.time >= lastHoldActivate + cooldown)
+                    {
+                        // We are held AND off cooldown, so perform the actions.
+                        actions.Invoke();
+
+                        // Record this time in lastHoldActivate so we can check 
+                        // when we next come off cooldown
+                        lastHoldActivate = Time.time;
+                    }
+                }
+                break;
+
+            // In this case, our press type is RELEASE.
+            case PressType.RELEASE:
+                // Check if the button has just now been released
+                if (Input.GetButtonUp(button))
+                {
+                    // The button has just been released, so perform the actions.
+                    actions.Invoke();
+                }
+                break;
+
+            // pressType wasn't any of the cases above...
+            default:
+                // Print out an error indicating an incorrect log type was provided.
+                Debug.LogError("ButtonActivator Error: Unrecognised pressType \"" + pressType + "\" provided");
+                break;
         }
     }
     // -------------------------------------------------------------------------
