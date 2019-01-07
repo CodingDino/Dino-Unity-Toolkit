@@ -41,7 +41,10 @@ public class ConsoleLogAction : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Editor Variables
     // -------------------------------------------------------------------------
-    [Tooltip("The type of log to use to print messages to the console.")]
+    [Tooltip("Type of log to use to print messages to the console:\n" +
+             "INFO - Basic log for information.\n" +
+             "WARNING - Calls attention, use for minor issues.\n" +
+             "ERROR - Can halt execution of the game, use for major issues.")]
     public LogType logTypeToUse = LogType.INFO;
     // -------------------------------------------------------------------------
     #endregion
