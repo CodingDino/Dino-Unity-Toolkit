@@ -62,14 +62,17 @@ public class InputButtonActivator : MonoBehaviour
 
     // -------------------------------------------------------------------------
 
-    [Header("")]
-    [Tooltip("The action(s) to be performed.")]
-    public UnityEvent actions;
+    [Header("Actions")]
+    [Tooltip("Perform these actions when the button is first pressed down.")]
+    public UnityEvent onButtonPressed;
+    [Tooltip("Perform these actions every frame the button is held down.")]
+    public UnityEvent onButtonHeld;
+    [Tooltip("Perform these actions when the button is released and comes back up.")]
+    public UnityEvent onButtonReleased;
 
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
-
 
 
     // -------------------------------------------------------------------------
@@ -91,56 +94,39 @@ public class InputButtonActivator : MonoBehaviour
         if (Time.time >= lastActivate + cooldown)
         {
             // We are off cooldown, so check if we should activate based on the type of press style
-            // Check which press type we have specified
-            switch (pressType)
+
+            // Check if the button has just now been pushed down
+            if (Input.GetButtonDown(button))
             {
-                // In this case, our press type is PRESS.
-                case PressType.PRESS:
-                    // Check if the button has just now been pushed down
-                    if (Input.GetButtonDown(button))
-                    {
-                        // The button has just been pressed, so perform the actions.
-                        actions.Invoke();
+                // The button has just been pressed, so perform the actions.
+                onButtonPressed.Invoke();
 
-                        // Record this time in lastActivate so we can check 
-                        // when we next come off cooldown
-                        lastActivate = Time.time;
-                    }
-                    break;
+                // Record this time in lastActivate so we can check 
+                // when we next come off cooldown
+                lastActivate = Time.time;
+            }
 
-                // In this case, our press type is PRESS.
-                case PressType.HOLD:
-                    // Check if the button is being held this frame
-                    if (Input.GetButton(button))
-                    {
-                        // The button is being held, so perform the actions.
-                        actions.Invoke();
 
-                        // Record this time in lastActivate so we can check 
-                        // when we next come off cooldown
-                        lastActivate = Time.time;
-                    }
-                    break;
+            // Check if the button is being held this frame
+            if (Input.GetButton(button))
+            {
+                // The button is being held, so perform the actions.
+                onButtonHeld.Invoke();
 
-                // In this case, our press type is RELEASE.
-                case PressType.RELEASE:
-                    // Check if the button has just now been released
-                    if (Input.GetButtonUp(button))
-                    {
-                        // The button has just been released, so perform the actions.
-                        actions.Invoke();
+                // Record this time in lastActivate so we can check 
+                // when we next come off cooldown
+                lastActivate = Time.time;
+            }
 
-                        // Record this time in lastActivate so we can check 
-                        // when we next come off cooldown
-                        lastActivate = Time.time;
-                    }
-                    break;
+            // Check if the button has just now been released
+            if (Input.GetButtonUp(button))
+            {
+                // The button has just been released, so perform the actions.
+                onButtonReleased.Invoke();
 
-                // pressType wasn't any of the cases above...
-                default:
-                    // Print out an error indicating an incorrect log type was provided.
-                    Debug.LogError("ButtonActivator Error: Unrecognised pressType \"" + pressType + "\" provided");
-                    break;
+                // Record this time in lastActivate so we can check 
+                // when we next come off cooldown
+                lastActivate = Time.time;
             }
         }       
     }
