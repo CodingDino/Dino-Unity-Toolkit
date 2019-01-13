@@ -226,7 +226,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2080968291}
-        m_MethodName: ActionPrintToConsole
+        m_MethodName: ActionPrintLog
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -269,7 +269,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2080968291}
-        m_MethodName: ActionPrintToConsole
+        m_MethodName: ActionPrintError
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -299,7 +299,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2080968291}
-        m_MethodName: ActionPrintToConsole
+        m_MethodName: ActionPrintWarning
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -338,7 +338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de4cc4a2293b4a2b89178381f473724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logTypeToUse: 0
 --- !u!4 &2080968292
 Transform:
   m_ObjectHideFlags: 0
