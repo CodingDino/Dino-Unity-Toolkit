@@ -21,6 +21,7 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: ConsoleLogAction
 // -----------------------------------------------------------------------------
+[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/ConsoleLogAction")]
 public class ConsoleLogAction : MonoBehaviour
 {
 
