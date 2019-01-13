@@ -55,7 +55,7 @@ public class ConsoleLogAction : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Public Functions
     // -------------------------------------------------------------------------
-    public void PerformAction(string messageToPrint)
+    public void ActionPrintToConsole(string messageToPrint)
     {
         // Check which log type we have specified
         switch (logTypeToUse)
