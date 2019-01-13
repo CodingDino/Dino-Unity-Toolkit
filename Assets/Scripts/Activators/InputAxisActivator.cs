@@ -58,6 +58,8 @@ public class InputAxisActivator : MonoBehaviour
     public AxisAction onAxisStart;
     [Tooltip("Perform these actions when the axis becomes zero.")]
     public AxisAction onAxisEnd;
+    [Tooltip("Perform these actions as long as the axis is non-zero.")]
+    public AxisAction onAxisActive;
 
     // -------------------------------------------------------------------------
     #endregion
@@ -113,6 +115,17 @@ public class InputAxisActivator : MonoBehaviour
             {
                 // The axis just became zero, so perform actions.
                 onAxisEnd.Invoke(axisValue);
+
+                // Record this time in lastActivate so we can check 
+                // when we next come off cooldown
+                lastActivate = Time.time;
+            }
+
+            // Is the axis active (non-zero)?
+            if (axisValue != 0)
+            {
+                // The axis just became non-zero, so perform actions.
+                onAxisActive.Invoke(axisValue);
 
                 // Record this time in lastActivate so we can check 
                 // when we next come off cooldown
