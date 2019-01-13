@@ -26,19 +26,6 @@ using UnityEngine.Events;
 public class InputButtonActivator : MonoBehaviour
 {
 
-    // -------------------------------------------------------------------------
-    #region Enum: PressType
-    // -------------------------------------------------------------------------
-    public enum PressType
-    {
-        PRESS,
-        HOLD,
-        RELEASE
-    }
-    // -------------------------------------------------------------------------
-    #endregion
-    // -------------------------------------------------------------------------
-
 
     // -------------------------------------------------------------------------
     #region Editor Variables
@@ -50,12 +37,6 @@ public class InputButtonActivator : MonoBehaviour
 
     [Tooltip("The button the player must press to activate these actions. Button must be set up in InputManager.")]
     public string button;
-
-    [Tooltip("Style for pressing the button:\n" +
-             "PRESS - Only activates when button is first pressed down.\n" +
-             "HOLD - Activates every frame the button is held down.\n" +
-             "RELEASE - Only activates when  a button is released.")]
-    public PressType pressType;
 
     [Tooltip("How frequently can this activation happen, in seconds? 0 for no cooldown.")]
     public float cooldown = 0;
