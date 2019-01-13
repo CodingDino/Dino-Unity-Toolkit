@@ -53,7 +53,7 @@ public class InputButtonActivator : MonoBehaviour
 
     [Tooltip("Style for pressing the button:\n" +
              "PRESS - Only activates when button is first pressed down.\n" +
-             "HOLD - Activates every frame the button is held down\n" +
+             "HOLD - Activates every frame the button is held down.\n" +
              "RELEASE - Only activates when  a button is released.")]
     public PressType pressType;
 
