@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
 #region File Info - ShowInInspectorIf.cs
 // -----------------------------------------------------------------------------
-// Project:     Drag N Drop Toolkit
+// Project:     Dino Toolkit
 // Created:     Sarah Herzog 2019
 // Purpose:     Property drawer for conditionally hiding in the inspector
 // -----------------------------------------------------------------------------

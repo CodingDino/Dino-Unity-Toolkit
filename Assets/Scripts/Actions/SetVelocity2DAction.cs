@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
 #region File Info - SetVelocity2DAction.cs
 // -----------------------------------------------------------------------------
-// Project:     Drag N Drop Toolkit
+// Project:     Dino Toolkit
 // Created:     Sarah Herzog 2019
 // Purpose:     Sets a Rigidbody2D's velocity
 // -----------------------------------------------------------------------------

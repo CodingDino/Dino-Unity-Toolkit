@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
 #region File Info - ConsoleAction.cs
 // -----------------------------------------------------------------------------
-// Project:     Drag N Drop Toolkit
+// Project:     Dino Toolkit
 // Created:     Sarah Herzog 2019
 // Purpose:     Print a message to Unity's console
 // -----------------------------------------------------------------------------
