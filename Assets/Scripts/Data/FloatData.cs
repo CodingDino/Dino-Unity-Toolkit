@@ -90,7 +90,7 @@ public class FloatData : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Unity Functions
     // -------------------------------------------------------------------------
-    private void Start()
+    private void Awake()
     {
         // Set our initial value
         currentValue = startingValue;
