@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
 #region File Info - SpawnObjectAction.cs
 // -----------------------------------------------------------------------------
-// Project:     Dino Toolkit
+// Project:     Dino Unity Toolkit
 // Created:     Sarah Herzog 2019
 // Purpose:     Spawns an object given a prefab to clone
 // -----------------------------------------------------------------------------

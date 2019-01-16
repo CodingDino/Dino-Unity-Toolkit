@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
 #region File Info - ShowInInspectorIf.cs
 // -----------------------------------------------------------------------------
-// Project:     Dino Toolkit
+// Project:     Dino Unity Toolkit
 // Created:     Sarah Herzog 2019
 // Purpose:     Property drawer for conditionally hiding in the inspector
 // -----------------------------------------------------------------------------

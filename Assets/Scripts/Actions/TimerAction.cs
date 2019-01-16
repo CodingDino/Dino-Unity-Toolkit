@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
 #region File Info - TimerAction.cs
 // -----------------------------------------------------------------------------
-// Project:     Dino Toolkit
+// Project:     Dino Unity Toolkit
 // Created:     Sarah Herzog 2019
 // Purpose:     Keeps track of time, counting up or down
 // -----------------------------------------------------------------------------

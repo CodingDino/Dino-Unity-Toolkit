@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------------------------------------
 #region File Info - InputAxisActivator.cs
 // -----------------------------------------------------------------------------
-// Project:     Dino Toolkit
+// Project:     Dino Unity Toolkit
 // Created:     Sarah Herzog 2019
 // Purpose:     Perform actions based on axis input
 // -----------------------------------------------------------------------------
