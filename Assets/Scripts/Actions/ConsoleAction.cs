@@ -27,7 +27,7 @@ public class ConsoleAction : MonoBehaviour
 
 
     // -------------------------------------------------------------------------
-    #region Public Functions
+    #region Action Functions
     // -------------------------------------------------------------------------
     public void ActionPrintLog(string messageToPrint)
     {

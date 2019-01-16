@@ -61,7 +61,7 @@ public class SetVelocity2DAction : MonoBehaviour
 
 
     // -------------------------------------------------------------------------
-    #region Public Functions
+    #region Action Functions
     // -------------------------------------------------------------------------
     public void ActionSetVelocity(Vector2 newVelocity)
     {

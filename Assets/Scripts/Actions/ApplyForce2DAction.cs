@@ -51,7 +51,7 @@ public class ApplyForce2DAction : MonoBehaviour
 
 
     // -------------------------------------------------------------------------
-    #region Public Functions
+    #region Action Functions
     // -------------------------------------------------------------------------
     public void ActionApplyForce(Vector2 forceToApply)
     {
