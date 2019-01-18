@@ -50,7 +50,7 @@ public class UITextAction : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Unity Functions
     // -------------------------------------------------------------------------
-    private void Start()
+    private void Awake()
     {
         // Store our text object for later use
         textObject = GetComponent<Text>();

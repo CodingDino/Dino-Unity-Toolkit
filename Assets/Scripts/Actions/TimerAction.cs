@@ -62,7 +62,7 @@ public class TimerAction : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Unity Functions
     // -------------------------------------------------------------------------
-    private void Start()
+    private void Awake()
     {
         timerData = GetComponent<FloatData>();
     }

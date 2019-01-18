@@ -39,7 +39,7 @@ public class ApplyForce2DAction : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Unity Functions
     // -------------------------------------------------------------------------
-    private void Start()
+    private void Awake()
     {
         // Get the Rigidbody2D component from our GameObject 
         // and store it for later use
