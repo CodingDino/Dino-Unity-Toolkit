@@ -1,9 +1,9 @@
 ﻿// -----------------------------------------------------------------------------
-#region File Info - FloatData.cs
+#region File Info - IntData.cs
 // -----------------------------------------------------------------------------
 // Project:     Dino Unity Toolkit
 // Created:     Sarah Herzog 2019
-// Purpose:     Storage for a numerical value
+// Purpose:     Storage for a whole number value
 // -----------------------------------------------------------------------------
 #endregion
 // -----------------------------------------------------------------------------
@@ -20,16 +20,16 @@ using UnityEngine.Events;
 
 
 // -----------------------------------------------------------------------------
-#region Component: FloatData
+#region Component: IntData
 // -----------------------------------------------------------------------------
-[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/FloatData")]
-public class FloatData : MonoBehaviour
+[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/IntData")]
+public class IntData : MonoBehaviour
 {
     // -------------------------------------------------------------------------
-    #region Custom Unity Event: FloatDataAction
+    #region Custom Unity Event: IntDataAction
     // -------------------------------------------------------------------------
     [System.Serializable]
-    public class FloatDataAction : UnityEvent<float> { }
+    public class IntDataAction : UnityEvent<int> { }
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
@@ -43,17 +43,17 @@ public class FloatData : MonoBehaviour
     [Header("Settings")]
     // -------------------------------------------------------------------------
     [Tooltip("The timer initially starts at this value")]
-    public float startingValue = 0f;
+    public int startingValue = 0;
     [Tooltip("Is there a minimum time for this timer?")]
     public bool hasMinValue = true;
     [Tooltip("The timer won't go lower than this minimum value")]
     [ShowInInspectorIf("hasMinValue")]
-    public float minValue = 0f;
+    public int minValue = 0;
     [Tooltip("Is there a maximum time for this timer?")]
     public bool hasMaxValue = false;
     [Tooltip("The timer won't go higher than this maximum value")]
     [ShowInInspectorIf("hasMaxValue")]
-    public float maxValue = 0f;
+    public int maxValue = 0;
     [Tooltip("What ID should this value be saved under? This must be UNIQUE " +
     	"- any shared IDs will override eachother when saving.")]
     public string saveID = "";
@@ -64,13 +64,13 @@ public class FloatData : MonoBehaviour
     [Header("Actions")]
     [Tooltip("Perform these actions when the value changes. " +
              "Also passes along the value it was changed to.")]
-    public FloatDataAction onValueChange;
+    public IntDataAction onValueChange;
     [Tooltip("Perform these actions when the timer reaches its max" +
              "Also passes along the value it was changed to.")]
-    public FloatDataAction onValueMax;
+    public IntDataAction onValueMax;
     [Tooltip("Perform these actions when the timer reaches its min" +
              "Also passes along the value it was changed to.")]
-    public FloatDataAction onValueMin;
+    public IntDataAction onValueMin;
 
 
     // -------------------------------------------------------------------------
@@ -81,7 +81,7 @@ public class FloatData : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Internal Variables
     // -------------------------------------------------------------------------
-    private float currentValue = 0f;
+    private int currentValue = 0;
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
@@ -109,7 +109,7 @@ public class FloatData : MonoBehaviour
         currentValue = startingValue;
     }
     // -------------------------------------------------------------------------
-    public void ActionSetValue(float newValue)
+    public void ActionSetValue(int newValue)
     {
         // Check if the we have a max value, 
         // and if the new value is bigger than our max
@@ -162,7 +162,7 @@ public class FloatData : MonoBehaviour
         }
     }
     // -------------------------------------------------------------------------
-    public void ActionAddValue(float toAdd)
+    public void ActionAddValue(int toAdd)
     {
         // Use our ActionSetValue function to do all the checking and callbacks
         ActionSetValue(currentValue + toAdd);
@@ -175,12 +175,12 @@ public class FloatData : MonoBehaviour
         {
             // We have a valid save id
             // Save the current value
-            PlayerPrefs.SetFloat(saveID, currentValue);
+            PlayerPrefs.SetInt(saveID, currentValue);
         }
         else
         {
             // We don't have a valid ID, print a warning
-            Debug.LogWarning("FloatData: Attempt to save value with invalid " +
+            Debug.LogWarning("IntData: Attempt to save value with invalid " +
             	"save ID.");
         }
     }
@@ -192,12 +192,12 @@ public class FloatData : MonoBehaviour
         {
             // We have a valid save id
             // Load the value and store it in our current value
-            currentValue = PlayerPrefs.GetFloat(saveID, currentValue);
+            currentValue = PlayerPrefs.GetInt(saveID, currentValue);
         }
         else
         {
             // We don't have a valid ID, print a warning
-            Debug.LogWarning("FloatData: Attempt to load value with invalid " +
+            Debug.LogWarning("IntData: Attempt to load value with invalid " +
             	"save ID.");
         }
     }
@@ -214,7 +214,7 @@ public class FloatData : MonoBehaviour
         else
         {
             // We don't have a valid ID, print a warning
-            Debug.LogWarning("FloatData: Attempt to clear saved value with " +
+            Debug.LogWarning("IntData: Attempt to clear saved value with " +
             	"invalid save ID.");
         }
     }
