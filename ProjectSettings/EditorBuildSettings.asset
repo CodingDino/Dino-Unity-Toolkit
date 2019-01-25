@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Examples/Full Games/Platformer/Scenes/Level1.unity
+    guid: cac69520cea934ac38b39b791ee794ce
+  - enabled: 1
+    path: Assets/Examples/Full Games/Platformer/Scenes/TimeUp.unity
+    guid: ccf95e274085a4800848f9fa8ff2dbfd
   m_configObjects: {}
