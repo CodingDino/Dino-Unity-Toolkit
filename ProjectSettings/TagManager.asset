@@ -43,3 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2831358695
+    locked: 0
+  - name: Terrain
+    uniqueID: 3575297351
+    locked: 0
+  - name: Objects
+    uniqueID: 4131911811
+    locked: 0
+  - name: Particles
+    uniqueID: 3020923249
+    locked: 0
