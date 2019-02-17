@@ -6,9 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Examples/Full Games/Platformer/Scenes/Level1.unity
+    path: Assets/DinoToolkit/Examples/Full Games/Platformer/Scenes/Platformer-Level1.unity
     guid: cac69520cea934ac38b39b791ee794ce
   - enabled: 1
-    path: Assets/Examples/Full Games/Platformer/Scenes/TimeUp.unity
+    path: Assets/DinoToolkit/Examples/Full Games/Platformer/Scenes/Platformer-TimeUp.unity
     guid: ccf95e274085a4800848f9fa8ff2dbfd
+  - enabled: 1
+    path: Assets/DinoToolkit/Examples/Full Games/Platformer/Scenes/Platformer-GameOver.unity
+    guid: ad619ae5b0ff04ad7b072c30a4987e2b
+  - enabled: 1
+    path: Assets/DinoToolkit/Examples/Full Games/Maze Game/Scenes/MazeGame-Level1.unity
+    guid: f87df986fcbad446086f85857b17d1f4
+  - enabled: 1
+    path: Assets/DinoToolkit/Examples/Full Games/Maze Game/Scenes/MazeGame-TimeUp.unity
+    guid: 0f9910b6c36ca433e873a65efd24ccad
+  - enabled: 1
+    path: Assets/DinoToolkit/Examples/Full Games/Maze Game/Scenes/MazeGame-GameOver.unity
+    guid: cf1ce67f36394431c9628cbe5c840f4d
+  - enabled: 1
+    path: Assets/DinoToolkit/Examples/Full Games/Maze Game/Scenes/MazeGame-YouWin.unity
+    guid: 09b67271619aa402cbfc5427617cd24f
   m_configObjects: {}
