@@ -427,7 +427,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114743652394900852}
-        m_MethodName: ActionSetFloatParamter
+        m_MethodName: ActionSetFloatParameter
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -737,6 +737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterName: 
+  useDifferentAnimator: 0
+  animatorObject: {fileID: 0}
 --- !u!212 &212373059419249796
 SpriteRenderer:
   m_ObjectHideFlags: 1

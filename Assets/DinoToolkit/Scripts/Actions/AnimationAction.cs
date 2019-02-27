@@ -66,7 +66,7 @@ public class AnimationAction : MonoBehaviour
         parameterName = newParameter;
     }
     // -------------------------------------------------------------------------
-    public void ActionSetFloatParamter(float newValue)
+    public void ActionSetFloatParameter(float newValue)
     {
         // Set our chosen parameter to the given value
         animatorObject.SetFloat(parameterName, newValue);
