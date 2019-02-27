@@ -21,7 +21,6 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: AnimationAction
 // -----------------------------------------------------------------------------
-[RequireComponent(typeof(Animator))]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/AnimationAction")]
 public class AnimationAction : MonoBehaviour
 {
@@ -31,15 +30,11 @@ public class AnimationAction : MonoBehaviour
     // -------------------------------------------------------------------------
     [Tooltip("The parameter that will be set. Can be changed via action.")]
     public string parameterName = "";
-    // -------------------------------------------------------------------------
-    #endregion
-    // -------------------------------------------------------------------------
-
-
-    // -------------------------------------------------------------------------
-    #region Internal Variables
-    // -------------------------------------------------------------------------
-    private Animator animatorObject = null;
+    [Tooltip("Should we use an animator on a different GameObject other than this one?")]
+    public bool useDifferentAnimator = false;
+    [Tooltip("The animator that will be used.")]
+    [ShowInInspectorIf("useDifferentAnimator")]
+    public Animator animatorObject = null;
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
@@ -50,8 +45,12 @@ public class AnimationAction : MonoBehaviour
     // -------------------------------------------------------------------------
     private void Awake()
     {
-        // Store our animator object for later use
-        animatorObject = GetComponent<Animator>();
+        // If we are NOT using a different animator...
+        if (useDifferentAnimator == false)
+        {
+            // Store our animator for later use
+            animatorObject = GetComponent<Animator>();
+        }
     }
     // -------------------------------------------------------------------------
     #endregion
