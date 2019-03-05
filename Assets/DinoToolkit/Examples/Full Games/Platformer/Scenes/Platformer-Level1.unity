@@ -490,8 +490,6 @@ GameObject:
   - component: {fileID: 356507389}
   - component: {fileID: 356507388}
   - component: {fileID: 356507387}
-  - component: {fileID: 356507386}
-  - component: {fileID: 356507385}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -499,71 +497,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &356507385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 356507384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dac248e99cf44ba5b147b6df9036296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &356507386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 356507384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e255820a8a54cb28986e93e3568cb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkName: 0
-  targetName: 
-  checkTag: 0
-  targetTag: 
-  checkLayer: 0
-  targetLayer: 
-  onTriggerEnterActions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 84130659}
-        m_MethodName: ActionAddValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 356507385}
-        m_MethodName: ActionDestroyObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 356507384}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onTriggerStayActions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onTriggerExitActions:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!58 &356507387
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -632,7 +565,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 356507384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5663486, y: -2.3197324, z: 0}
+  m_LocalPosition: {x: -2.67, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1193,11 +1126,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4864172063947512, guid: e0ca9b71b387744ae86f1a8716a3dd3e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 4864172063947512, guid: e0ca9b71b387744ae86f1a8716a3dd3e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -2.47
       objectReference: {fileID: 0}
     - target: {fileID: 4864172063947512, guid: e0ca9b71b387744ae86f1a8716a3dd3e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1226,6 +1159,54 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0ca9b71b387744ae86f1a8716a3dd3e, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1054807774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1308155561063760, guid: e0ca9b71b387744ae86f1a8716a3dd3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1054807773}
+--- !u!114 &1054807775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1054807774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e255820a8a54cb28986e93e3568cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkName: 0
+  targetName: 
+  checkTag: 1
+  targetTag: Coin
+  checkLayer: 0
+  targetLayer: 
+  onTriggerEnterActions:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTriggerStayActions:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTriggerExitActions:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnTrigger2DActivator+TriggerAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1054807776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1054807774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dac248e99cf44ba5b147b6df9036296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1093063933
 GameObject:
   m_ObjectHideFlags: 0
