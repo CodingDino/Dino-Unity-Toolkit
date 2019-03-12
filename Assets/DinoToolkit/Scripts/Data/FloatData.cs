@@ -192,7 +192,7 @@ public class FloatData : MonoBehaviour
         {
             // We have a valid save id
             // Load the value and store it in our current value
-            currentValue = PlayerPrefs.GetFloat(saveID, currentValue);
+            ActionSetValue(PlayerPrefs.GetFloat(saveID, currentValue));
         }
         else
         {

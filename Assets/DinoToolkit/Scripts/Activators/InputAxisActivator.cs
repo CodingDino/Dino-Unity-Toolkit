@@ -114,6 +114,10 @@ public class InputAxisActivator : MonoBehaviour
             if (previousAxisValue != 0 && axisValue == 0)
             {
                 // The axis just became zero, so perform actions.
+
+                // First, do any "active" actions because we are finishing being active
+                onAxisActive.Invoke(axisValue);
+                // Then do "end" actions afteward because we are no longer active
                 onAxisEnd.Invoke(axisValue);
 
                 // Record this time in lastActivate so we can check 

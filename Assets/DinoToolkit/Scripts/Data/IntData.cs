@@ -192,7 +192,7 @@ public class IntData : MonoBehaviour
         {
             // We have a valid save id
             // Load the value and store it in our current value
-            currentValue = PlayerPrefs.GetInt(saveID, currentValue);
+            ActionSetValue(PlayerPrefs.GetInt(saveID, currentValue));
         }
         else
         {
