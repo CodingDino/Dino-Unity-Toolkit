@@ -92,6 +92,19 @@ public class SetVelocity2DAction : MonoBehaviour
         rigidBody.velocity = newVelocity;
     }
     // -------------------------------------------------------------------------
+    public void ActionMoveInFacingDirection(float newSpeed)
+    {
+        // Determine direction to move
+        Vector3 direction = transform.rotation * Vector3.right;
+
+        // Normalise the direction (length 1)
+        direction.Normalize();
+
+        // Apply the new velocity to our rigidbody
+        // Scale by speed value
+        rigidBody.velocity = direction * newSpeed * speed;
+    }
+    // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
 
