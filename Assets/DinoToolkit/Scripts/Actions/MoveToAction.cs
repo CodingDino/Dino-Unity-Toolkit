@@ -217,9 +217,33 @@ public class MoveToAction : MonoBehaviour
         }
     }
     // -------------------------------------------------------------------------
+    public void ActionMoveToCurrentObjectWithTagPoint(string tagName)
+    {
+        // Find any object with this tag
+        GameObject objectWithTag = GameObject.FindWithTag(tagName);
+        // If we found an object...
+        if (objectWithTag != null)
+        {
+            // Move to it
+            ActionMoveToCurrentObjectPoint(objectWithTag);
+        }
+    }
+    // -------------------------------------------------------------------------
     public void ActionMoveToCurrentObjectPoint(GameObject newTargetObject)
     {
         ActionMoveToPoint(newTargetObject.transform.position);
+    }
+    // -------------------------------------------------------------------------
+    public void ActionFollowObjectWithTag(string tagName)
+    {
+        // Find any object with this tag
+        GameObject objectWithTag = GameObject.FindWithTag(tagName);
+        // If we found an object...
+        if (objectWithTag != null)
+        {
+            // Follow it
+            ActionFollowObject(objectWithTag);
+        }
     }
     // -------------------------------------------------------------------------
     public void ActionFollowObject(GameObject newTargetObject)
