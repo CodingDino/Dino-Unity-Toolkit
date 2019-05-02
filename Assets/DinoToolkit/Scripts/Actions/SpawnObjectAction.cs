@@ -21,6 +21,7 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: SpawnObjectAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/SpawnObjectAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/SpawnObjectAction")]
 public class SpawnObjectAction : MonoBehaviour
 {

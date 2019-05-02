@@ -21,6 +21,7 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: ConsoleAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/ConsoleAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/ConsoleAction")]
 public class ConsoleAction : MonoBehaviour
 {

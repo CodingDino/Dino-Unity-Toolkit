@@ -22,6 +22,7 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: InputMouseActivator
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Activators/InputMouseActivator")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/InputMouseActivator")]
 public class InputMouseActivator : MonoBehaviour
 {

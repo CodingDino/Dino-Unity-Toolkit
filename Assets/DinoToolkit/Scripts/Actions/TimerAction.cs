@@ -22,6 +22,7 @@ using UnityEngine;
 #region Component: TimerAction
 // -----------------------------------------------------------------------------
 [RequireComponent(typeof(FloatData))]
+[AddComponentMenu("Dino Toolkit/Actions/TimerAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/TimerAction")]
 public class TimerAction : MonoBehaviour
 {

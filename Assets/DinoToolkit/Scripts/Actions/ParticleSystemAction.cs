@@ -22,6 +22,7 @@ using UnityEngine;
 #region Component: ParticleSystemAction
 // -----------------------------------------------------------------------------
 [RequireComponent(typeof(ParticleSystem))]
+[AddComponentMenu("Dino Toolkit/Actions/ParticleSystemAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/ParticleSystemAction")]
 public class ParticleSystemAction : MonoBehaviour
 {

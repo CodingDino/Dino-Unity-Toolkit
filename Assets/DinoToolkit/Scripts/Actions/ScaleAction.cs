@@ -21,6 +21,7 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: ScaleAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/ScaleAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/ScaleAction")]
 public class ScaleAction : MonoBehaviour
 {

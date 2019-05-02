@@ -22,6 +22,7 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: UpdateActivator
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Activators/UpdateActivator")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/UpdateActivator")]
 public class UpdateActivator : MonoBehaviour
 {

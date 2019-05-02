@@ -22,6 +22,7 @@ using UnityEngine;
 #region Component: FlipSpriteAction
 // -----------------------------------------------------------------------------
 [RequireComponent(typeof(SpriteRenderer))]
+[AddComponentMenu("Dino Toolkit/Actions/FlipSpriteAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/FlipSpriteAction")]
 public class FlipSpriteAction : MonoBehaviour
 {

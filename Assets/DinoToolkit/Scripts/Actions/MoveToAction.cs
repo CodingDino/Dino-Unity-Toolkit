@@ -22,6 +22,7 @@ using UnityEngine;
 #region Component: MoveToAction
 // -----------------------------------------------------------------------------
 [RequireComponent(typeof(Rigidbody2D))]
+[AddComponentMenu("Dino Toolkit/Actions/MoveToAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/MoveToAction")]
 public class MoveToAction : MonoBehaviour
 {

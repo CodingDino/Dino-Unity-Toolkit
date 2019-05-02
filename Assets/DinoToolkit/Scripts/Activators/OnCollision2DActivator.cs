@@ -23,6 +23,7 @@ using UnityEngine.Events;
 #region Component: OnCollision2DActivator
 // -----------------------------------------------------------------------------
 [RequireComponent(typeof(Collider2D))]
+[AddComponentMenu("Dino Toolkit/Activators/OnCollision2DActivator")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/OnCollision2DActivator")]
 public class OnCollision2DActivator : MonoBehaviour
 {

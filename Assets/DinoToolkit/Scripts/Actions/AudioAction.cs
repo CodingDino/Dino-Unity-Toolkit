@@ -22,6 +22,7 @@ using UnityEngine;
 #region Component: AudioAction
 // -----------------------------------------------------------------------------
 [RequireComponent(typeof(AudioSource))]
+[AddComponentMenu("Dino Toolkit/Actions/AudioAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/AudioAction")]
 public class AudioAction : MonoBehaviour
 {

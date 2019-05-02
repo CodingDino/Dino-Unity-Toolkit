@@ -22,6 +22,7 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: InputButtonActivator
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Activators/InputButtonActivator")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/InputButtonActivator")]
 public class InputButtonActivator : MonoBehaviour
 {

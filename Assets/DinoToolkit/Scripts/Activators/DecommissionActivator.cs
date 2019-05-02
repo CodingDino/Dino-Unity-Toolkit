@@ -14,6 +14,7 @@
 // -----------------------------------------------------------------------------
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 // -----------------------------------------------------------------------------
 #endregion
 // -----------------------------------------------------------------------------
@@ -22,20 +23,22 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: DecommissionActivator
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Activators/DecommissionActivator")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/DecommissionActivator")]
 public class DecommissionActivator : MonoBehaviour
 {
 
-
     // -------------------------------------------------------------------------
     #region Editor Variables
     // -------------------------------------------------------------------------
-    [Tooltip("Perform these actions once when the game quits.")]
-    public UnityEvent onApplicationQuit;
     [Tooltip("Perform these actions once when the GameObject is being disabled or destroyed.")]
     public UnityEvent onDisable;
     [Tooltip("Perform these actions once when the GameObject is being destroyed.")]
     public UnityEvent onDestroy;
+    [Tooltip("Perform these actions once when the scene is being unloaded.")]
+    public UnityEvent onSceneUnloaded;
+    [Tooltip("Perform these actions once when the game quits.")]
+    public UnityEvent onApplicationQuit;
     // -------------------------------------------------------------------------
     #endregion
     // -------------------------------------------------------------------------
@@ -44,19 +47,34 @@ public class DecommissionActivator : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Unity Functions
     // -------------------------------------------------------------------------
-    private void OnApplicationQuit()
+    public void Start()
     {
-        onApplicationQuit.Invoke();
+        SceneManager.sceneLoaded += OnSceneUnloaded;
+        Debug.Log("DecommissionActivator.Start()");
     }
     // -------------------------------------------------------------------------
     private void OnDisable()
     {
         onDisable.Invoke();
+        Debug.Log("DecommissionActivator.OnDisable()");
     }
     // -------------------------------------------------------------------------
     private void OnDestroy()
     {
         onDestroy.Invoke();
+        Debug.Log("DecommissionActivator.OnDestroy()");
+    }
+    // -------------------------------------------------------------------------
+    private void OnSceneUnloaded(Scene  current, LoadSceneMode mode)
+    {
+        onSceneUnloaded.Invoke();
+        Debug.Log("DecommissionActivator.OnSceneUnloaded()");
+    }
+    // -------------------------------------------------------------------------
+    private void OnApplicationQuit()
+    {
+        onApplicationQuit.Invoke();
+        Debug.Log("DecommissionActivator.OnApplicationQuit()");
     }
     // -------------------------------------------------------------------------
     #endregion

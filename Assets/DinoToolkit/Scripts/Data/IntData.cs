@@ -22,6 +22,7 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: IntData
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Data/IntData")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/IntData")]
 public class IntData : MonoBehaviour
 {

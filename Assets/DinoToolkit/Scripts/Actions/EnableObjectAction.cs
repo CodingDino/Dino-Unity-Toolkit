@@ -21,6 +21,7 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: EnableObjectAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/EnableObjectAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/EnableObjectAction")]
 public class EnableObjectAction : MonoBehaviour
 {

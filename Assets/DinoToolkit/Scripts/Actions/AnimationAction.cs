@@ -21,6 +21,7 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: AnimationAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/AnimationAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/AnimationAction")]
 public class AnimationAction : MonoBehaviour
 {

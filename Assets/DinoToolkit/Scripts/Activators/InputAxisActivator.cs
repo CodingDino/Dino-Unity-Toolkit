@@ -22,6 +22,7 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: InputAxisActivator
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Activators/InputAxisActivator")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/InputAxisActivator")]
 public class InputAxisActivator : MonoBehaviour
 {

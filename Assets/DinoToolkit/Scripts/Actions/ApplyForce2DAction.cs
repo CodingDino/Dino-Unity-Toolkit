@@ -22,6 +22,7 @@ using UnityEngine;
 #region Component: ApplyForce2DAction
 // -----------------------------------------------------------------------------
 [RequireComponent(typeof(Rigidbody2D))]
+[AddComponentMenu("Dino Toolkit/Actions/ApplyForce2DAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/ApplyForce2DAction")]
 public class ApplyForce2DAction : MonoBehaviour
 {

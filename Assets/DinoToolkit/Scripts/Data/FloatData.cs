@@ -22,6 +22,7 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: FloatData
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Data/FloatData")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/FloatData")]
 public class FloatData : MonoBehaviour
 {

@@ -21,6 +21,7 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: DestroyObjectAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/DestroyObjectAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/DestroyObjectAction")]
 public class DestroyObjectAction : MonoBehaviour
 {

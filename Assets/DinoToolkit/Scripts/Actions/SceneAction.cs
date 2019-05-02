@@ -23,6 +23,7 @@ using UnityEngine.SceneManagement;
 // -----------------------------------------------------------------------------
 #region Component: SceneAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/SceneAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/SceneAction")]
 public class SceneAction : MonoBehaviour
 {

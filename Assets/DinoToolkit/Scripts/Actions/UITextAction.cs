@@ -23,6 +23,7 @@ using UnityEngine.UI;
 #region Component: UITextAction
 // -----------------------------------------------------------------------------
 [RequireComponent(typeof(Text))]
+[AddComponentMenu("Dino Toolkit/Actions/UITextAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/UITextAction")]
 public class UITextAction : MonoBehaviour
 {

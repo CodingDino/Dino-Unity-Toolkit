@@ -22,6 +22,7 @@ using UnityEngine.Events;
 // -----------------------------------------------------------------------------
 #region Component: RandomAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/RandomAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/RandomAction")]
 public class RandomAction : MonoBehaviour
 {

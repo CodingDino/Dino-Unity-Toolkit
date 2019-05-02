@@ -21,6 +21,7 @@ using UnityEngine;
 // -----------------------------------------------------------------------------
 #region Component: RotateAction
 // -----------------------------------------------------------------------------
+[AddComponentMenu("Dino Toolkit/Actions/RotateAction")]
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/RotateAction")]
 public class RotateAction : MonoBehaviour
 {
