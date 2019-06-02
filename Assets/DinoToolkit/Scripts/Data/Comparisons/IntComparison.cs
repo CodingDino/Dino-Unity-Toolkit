@@ -26,6 +26,19 @@ using UnityEngine.Events;
 [HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/IntComparison")]
 public class IntComparison : MonoBehaviour
 {
+    // -------------------------------------------------------------------------
+    #region Enum: StandardType
+    // -------------------------------------------------------------------------
+    public enum StandardType
+    {
+        DATA,
+        RAW
+    }
+    // -------------------------------------------------------------------------
+    #endregion
+    // -------------------------------------------------------------------------
+
+
 
     // -------------------------------------------------------------------------
     #region Editor Variables
@@ -35,13 +48,13 @@ public class IntComparison : MonoBehaviour
     [Header("Settings")]
     // -------------------------------------------------------------------------
 
-    [Tooltip("Should our standard value be Data, or a static integer?")]
-    public bool isStandardData = true;
+    [Tooltip("Should our standard value be a Data component, or a raw integer?")]
+    public StandardType standardType = StandardType.DATA;
     [Tooltip("The standard IntData value that we'll be comparing to")]
-    [ShowInInspectorIf("isStandardData", true)]
+    [ShowOnEnum("standardType", (int)StandardType.DATA)]
     public IntData standardData = null;
     [Tooltip("The standard integer value that we'll be comparing to")]
-    [ShowInInspectorIf("isStandardData", false)]
+    [ShowOnEnum("standardType", (int)StandardType.RAW)]
     public int standardInt = 0;
 
     // -------------------------------------------------------------------------
@@ -66,7 +79,7 @@ public class IntComparison : MonoBehaviour
     // -------------------------------------------------------------------------
     private int GetStandard()
     {
-        if (isStandardData)
+        if (standardType == StandardType.DATA)
         {
             return standardData.GetCurrentValue();
         }
