@@ -49,12 +49,16 @@ public class UITextAction : MonoBehaviour
 
 
     // -------------------------------------------------------------------------
-    #region Unity Functions
+    #region Internal Functions
     // -------------------------------------------------------------------------
-    private void Awake()
+    private Text GetTextObject()
     {
-        // Store our text object for later use
-        textObject = GetComponent<Text>();
+        if (textObject == null)
+            // Get and store our text object for later use
+            textObject = GetComponent<Text>();
+
+        // return the cached text object
+        return textObject;
     }
     // -------------------------------------------------------------------------
     #endregion
@@ -67,13 +71,13 @@ public class UITextAction : MonoBehaviour
     public void ActionSetTextString(string newText)
     {
         // Set the text object to use our new string
-        textObject.text = newText;
+        GetTextObject().text = newText;
     }
     // -------------------------------------------------------------------------
     public void ActionSetTextInt(int newText)
     {
         // Convert the int to a string using the default method
-        textObject.text = newText.ToString();
+        GetTextObject().text = newText.ToString();
     }
     // -------------------------------------------------------------------------
     public void ActionSetTextFloat(float newText)
@@ -83,13 +87,13 @@ public class UITextAction : MonoBehaviour
         {
             // We should limit them!
             // Convert the float to a string using a special formatting method
-            textObject.text = newText.ToString("F" + numDecimals);
+            GetTextObject().text = newText.ToString("F" + numDecimals);
         }
         else
         {
             // We should not limit them
             // Convert the float to a string using the default method
-            textObject.text = newText.ToString();
+            GetTextObject().text = newText.ToString();
         }
     }
     // -------------------------------------------------------------------------

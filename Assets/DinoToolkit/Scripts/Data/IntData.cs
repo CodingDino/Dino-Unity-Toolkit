@@ -93,8 +93,22 @@ public class IntData : MonoBehaviour
     // -------------------------------------------------------------------------
     private void Awake()
     {
-        // Set our initial value
-        currentValue = startingValue;
+        // If we haven't already set our currentValue somewhere...
+        if (currentValue == 0)
+            // Set our initial value
+            currentValue = startingValue;
+    }
+    // -------------------------------------------------------------------------
+    #endregion
+    // -------------------------------------------------------------------------
+
+
+    // -------------------------------------------------------------------------
+    #region Utility Functions
+    // -------------------------------------------------------------------------
+    public int GetCurrentValue()
+    {
+        return currentValue;
     }
     // -------------------------------------------------------------------------
     #endregion
@@ -108,6 +122,12 @@ public class IntData : MonoBehaviour
     {
         // Reset the value, but don't stop it
         currentValue = startingValue;
+    }
+    // -------------------------------------------------------------------------
+    public void ActionSetValue(IntData newValue)
+    {
+        // Get the integer value from the data and set it
+        ActionSetValue(newValue.GetCurrentValue());
     }
     // -------------------------------------------------------------------------
     public void ActionSetValue(int newValue)
@@ -177,6 +197,9 @@ public class IntData : MonoBehaviour
             // We have a valid save id
             // Save the current value
             PlayerPrefs.SetInt(saveID, currentValue);
+
+            // Write to disk
+            PlayerPrefs.Save();
         }
         else
         {
@@ -203,6 +226,7 @@ public class IntData : MonoBehaviour
         }
     }
     // -------------------------------------------------------------------------
+    [ContextMenu("Clear Saved Value")]
     public void ActionClearSavedValue()
     {
         // Do we have a valid save id?

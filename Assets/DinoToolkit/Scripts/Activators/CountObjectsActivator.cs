@@ -71,7 +71,7 @@ public class CountObjectsActivator : MonoBehaviour
         if (numObjects == comparison)
             onEqualTo.Invoke();
 
-        if (numObjects >= comparison)
+        if (numObjects > comparison)
             onGreaterThan.Invoke();
     }
     // -------------------------------------------------------------------------
