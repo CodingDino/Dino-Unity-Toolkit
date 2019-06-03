@@ -1,9 +1,9 @@
 ﻿// -----------------------------------------------------------------------------
-#region File Info - IntComparison.cs
+#region File Info - FloatComparison.cs
 // -----------------------------------------------------------------------------
 // Project:     Dino Unity Toolkit
 // Created:     Sarah Herzog 2019
-// Purpose:     Compares two integers and performs actions accordingly
+// Purpose:     Compares two floats and performs actions accordingly
 // -----------------------------------------------------------------------------
 #endregion
 // -----------------------------------------------------------------------------
@@ -20,11 +20,11 @@ using UnityEngine.Events;
 
 
 // -----------------------------------------------------------------------------
-#region Component: IntComparison
+#region Component: FloatComparison
 // -----------------------------------------------------------------------------
-[AddComponentMenu("Dino Toolkit/Comparisons/IntComparison")]
-[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/IntComparison")]
-public class IntComparison : MonoBehaviour
+[AddComponentMenu("Dino Toolkit/Comparisons/FloatComparison")]
+[HelpURL("https://github.com/CodingDino/FifeCollege-Unity-DragNDrop/wiki/FloatComparison")]
+public class FloatComparison : MonoBehaviour
 {
     // -------------------------------------------------------------------------
     #region Enum: StandardType
@@ -50,12 +50,12 @@ public class IntComparison : MonoBehaviour
 
     [Tooltip("Should our standard value be a Data component, or a raw integer?")]
     public StandardType standardType = StandardType.DATA;
-    [Tooltip("The standard IntData value that we'll be comparing to")]
+    [Tooltip("The standard FloatData value that we'll be comparing to")]
     [ShowOnEnum("standardType", (int)StandardType.DATA)]
-    public IntData standardData = null;
-    [Tooltip("The standard integer value that we'll be comparing to")]
+    public FloatData standardData = null;
+    [Tooltip("The standard float value that we'll be comparing to")]
     [ShowOnEnum("standardType", (int)StandardType.RAW)]
-    public int standardRaw = 0;
+    public float standardRaw = 0;
 
     // -------------------------------------------------------------------------
     [Header("Activation Lists")]
@@ -77,7 +77,7 @@ public class IntComparison : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Internal Functions
     // -------------------------------------------------------------------------
-    private int GetStandard()
+    private float GetStandard()
     {
         if (standardType == StandardType.DATA)
         {
@@ -97,7 +97,7 @@ public class IntComparison : MonoBehaviour
     // -------------------------------------------------------------------------
     #region Action Functions
     // -------------------------------------------------------------------------
-    public void ActionCompareToTarget(int value)
+    public void ActionCompareToTarget(float value)
     {
         // Compare the supplied value to our standard value
 
@@ -114,7 +114,7 @@ public class IntComparison : MonoBehaviour
             onGreaterThan.Invoke();
     }
     // -------------------------------------------------------------------------
-    public void ActionCompareToTarget(IntData value)
+    public void ActionCompareToTarget(FloatData value)
     {
         ActionCompareToTarget(value.GetCurrentValue());
     }

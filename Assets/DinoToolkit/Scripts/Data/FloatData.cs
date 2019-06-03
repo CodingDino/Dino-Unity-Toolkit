@@ -89,12 +89,27 @@ public class FloatData : MonoBehaviour
 
 
     // -------------------------------------------------------------------------
+    #region Utility Functions
+    // -------------------------------------------------------------------------
+    public float GetCurrentValue()
+    {
+        return currentValue;
+    }
+    // -------------------------------------------------------------------------
+    #endregion
+    // -------------------------------------------------------------------------
+
+
+
+    // -------------------------------------------------------------------------
     #region Unity Functions
     // -------------------------------------------------------------------------
     private void Awake()
     {
-        // Set our initial value
-        currentValue = startingValue;
+        // If we haven't already set our currentValue somewhere...
+        if (currentValue == 0)
+            // Set our initial value
+            currentValue = startingValue;
     }
     // -------------------------------------------------------------------------
     #endregion
