@@ -125,6 +125,12 @@ public class FloatData : MonoBehaviour
         currentValue = startingValue;
     }
     // -------------------------------------------------------------------------
+    public void ActionSetValue(FloatData newValue)
+    {
+        // Get the integer value from the data and set it
+        ActionSetValue(newValue.GetCurrentValue());
+    }
+    // -------------------------------------------------------------------------
     public void ActionSetValue(float newValue)
     {
         // Check if the we have a max value, 
